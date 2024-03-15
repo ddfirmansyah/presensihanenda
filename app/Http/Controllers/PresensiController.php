@@ -75,7 +75,7 @@ class PresensiController extends Controller
         $ceklintashari_presensi = $cekpresensi_sebelumnya != null  ? $cekpresensi_sebelumnya->lintashari : 0;
 
         if ($ceklintashari_presensi == 1) {
-            if ($jamsekarang < "08:00") {
+            if ($jamsekarang < "09:00") {
                 $hariini = $tgl_sebelumnya;
             }
         }
@@ -150,7 +150,7 @@ class PresensiController extends Controller
 
         $kode_cabang = Auth::guard('karyawan')->user()->kode_cabang;
         $kode_dept = Auth::guard('karyawan')->user()->kode_dept;
-        $tgl_presensi = $ceklintashari_presensi == 1 && $jamsekarang < "08:00" ? $tgl_sebelumnya : date("Y-m-d");
+        $tgl_presensi = $ceklintashari_presensi == 1 && $jamsekarang < "09:00" ? $tgl_sebelumnya : date("Y-m-d");
         $jam = date("H:i:s");
         $lok_kantor = DB::table('cabang')->where('kode_cabang', $kode_cabang)->first();
         $lok = explode(",", $lok_kantor->lokasi_cabang);
@@ -336,7 +336,7 @@ class PresensiController extends Controller
         $password = Hash::make($request->password);
         $karyawan = DB::table('karyawan')->where('nik', $nik)->first();
         $request->validate([
-            'foto' => 'image|mimes:png,jpg|max:1024'
+            'foto' => 'image|mimes:png,jpg|max:2000'
         ]);
         if ($request->hasFile('foto')) {
             $foto = $nik . "." . $request->file('foto')->getClientOriginalExtension();
