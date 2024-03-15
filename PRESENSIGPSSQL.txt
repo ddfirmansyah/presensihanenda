@@ -1,0 +1,10 @@
+PRESENSIGPS
+https://klinikhanenda.id/phpma
+databse : u1601954_presensirvp
+user : u1601954_presensigpsuser
+pass : 6jcX)E!nGAk8
+
+presensi.rumahvaksin.id
+database : u1601954_presensirvp
+user : u1601954_presensirvpuser
+pass : 0,6v,+qW~7P(

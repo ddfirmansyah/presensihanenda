@@ -98,9 +98,9 @@
                     <span id="title">
                         REKAP PRESENSI KARYAWAN<br>
                         PERIODE {{ strtoupper($namabulan[$bulan]) }} {{ $tahun }}<br>
-                        KLINIK UTAMA HANENDA<br>
+                        PT. ADAM ADIFA<br>
                     </span>
-                    <span><i>Jl. Raya Tengah R9-54 Gedong Pasar Rebo Jakarta Timur</i></span>
+                    <span><i>Jln. H. Dahlan No. 75, Kecamatan Sindangrasa, Kabupaten Ciamis</i></span>
                 </td>
             </tr>
         </table>
@@ -137,6 +137,13 @@
                     $color = "";
                     for($i=1; $i<=$jmlhari; $i++){
                         $tgl = "tgl_".$i;
+                        $tgl_presensi = $rangetanggal[$i-1];
+                        $search_items = [
+                            'nik' => $r->nik,
+                            'tanggal_libur' => $tgl_presensi
+                        ];
+                        $ceklibur = cekkaryawanlibur($datalibur, $search_items);
+
                         $datapresensi = explode("|",$r->$tgl);
                         if($r->$tgl != NULL){
                             $status = $datapresensi[2];
@@ -144,6 +151,7 @@
                             $status = "";
                         }
 
+                        $cekhari = gethari(date('D',strtotime($tgl_presensi)));
                         if($status == "h"){
                             $jml_hadir += 1;
                             $color = "white";
@@ -165,10 +173,22 @@
                         }
 
 
-                        if(empty($status)){
+                        if(empty($status) && empty($ceklibur) && $cekhari != 'Minggu'){
                             $jml_alpa += 1;
                             $color = "red";
                         }
+
+                        if(!empty($ceklibur)){
+                            $color = "green";
+                        }
+
+
+                        if($cekhari == "Minggu"){
+                            $color = "orange";
+                        }
+
+
+
                 ?>
                     <td style="background-color: {{ $color }}">
 
@@ -186,23 +206,30 @@
                 </tr>
             @endforeach
         </table>
-
+        <h4>Keterangan Libur :</h4>
+        <ol>
+            @foreach ($harilibur as $d)
+                <li>{{ date('d-m-Y', strtotime($d->tanggal_libur)) }} - {{ $d->keterangan }}</li>
+            @endforeach
+        </ol>
         <table width="100%" style="margin-top:100px">
             <tr>
                 <td></td>
-                <td style="text-align: center">Jakarta, {{ date('d-m-Y') }}</td>
+                <td style="text-align: center">Tasikmalaya, {{ date('d-m-Y') }}</td>
             </tr>
             <tr>
                 <td style="text-align: center; vertical-align:bottom" height="100px">
-                    <u>Maya Maulina Solihah</u><br>
+                    <u>Qiana Aqila</u><br>
                     <i><b>HRD Manager</b></i>
                 </td>
                 <td style="text-align: center; vertical-align:bottom">
-                    <u>dr. Fenny Lovitha Dewi, Sp.KFR</u><br>
+                    <u>Daffa</u><br>
                     <i><b>Direktur</b></i>
                 </td>
             </tr>
         </table>
+
+
     </section>
 
 </body>

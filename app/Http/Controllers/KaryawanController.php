@@ -175,7 +175,49 @@ class KaryawanController extends Controller
         if ($reset) {
             return Redirect::back()->with(['success' => 'Data Password Berhasil di Reset']);
         } else {
-            return Redirect::back()->with(['warnin' => 'Data Password Gagal di Reset']);
+            return Redirect::back()->with(['warning' => 'Data Password Gagal di Reset']);
+        }
+    }
+
+    public function lockandunlocklocation($nik)
+    {
+        try {
+            $karyawan = DB::table('karyawan')->where('nik', $nik)->first();
+            $status_location = $karyawan->status_location;
+            if ($status_location == '1') {
+                DB::table('karyawan')->where('nik', $nik)->update([
+                    'status_location' => '0'
+                ]);
+            } else {
+                DB::table('karyawan')->where('nik', $nik)->update([
+                    'status_location' => '1'
+                ]);
+            }
+
+            return Redirect::back()->with(['success' => 'Status Location Berhasil Diupdate']);
+        } catch (\Exception $e) {
+            return Redirect::back()->with(['warning' => 'Status Location Gagal Diupdate']);
+        }
+    }
+
+    public function lockandunlockjamkerja($nik)
+    {
+        try {
+            $karyawan = DB::table('karyawan')->where('nik', $nik)->first();
+            $status_jam_kerja = $karyawan->status_jam_kerja;
+            if ($status_jam_kerja == '1') {
+                DB::table('karyawan')->where('nik', $nik)->update([
+                    'status_jam_kerja' => '0'
+                ]);
+            } else {
+                DB::table('karyawan')->where('nik', $nik)->update([
+                    'status_jam_kerja' => '1'
+                ]);
+            }
+
+            return Redirect::back()->with(['success' => 'Status Jam Kerja Berhasil Diupdate']);
+        } catch (\Exception $e) {
+            return Redirect::back()->with(['warning' => 'Status Jam Kerja Gagal Diupdate']);
         }
     }
 }

@@ -1,0 +1,14 @@
+
+BARU
+{{ 
+                                        $d->status == 'i' ? 'Izin' : 
+                                        ($d->status == 's' ? 'Sakit' :
+                                        ($d->status == 'c' ? 'Cuti' : 'status tidak diketahui'))
+                                        }}
+
+
+
+
+
+LAMA
+<td>{{ $d->status == 'i' ? 'Izin' : 'Sakit' }}</td>
