@@ -215,7 +215,7 @@
         <table width="100%" style="margin-top:100px">
             <tr>
                 <td></td>
-                <td style="text-align: center">Tasikmalaya, {{ date('d-m-Y') }}</td>
+                <td style="text-align: center">Jakarta Timur, {{ date('d-m-Y') }}</td>
             </tr>
             <tr>
                 <td style="text-align: center; vertical-align:bottom" height="100px">

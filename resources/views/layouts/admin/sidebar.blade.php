@@ -314,7 +314,7 @@
                             </svg>
                         </span>
                         <span class="nav-link-title">
-                            Data Izin / Sakit
+                            Data Izin | Sakit | Cuti
                         </span>
                     </a>
                 </li>
