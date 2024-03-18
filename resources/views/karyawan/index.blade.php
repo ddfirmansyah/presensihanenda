@@ -534,7 +534,7 @@
     <script>
         $(function() {
 
-            $("#nik").mask("000000000");
+            //$("#nik").mask("000000000");
             $("#no_hp").mask("0000000000000");
             $("#btnTambahkaryawan").click(function() {
                 $("#modal-inputkaryawan").modal("show");

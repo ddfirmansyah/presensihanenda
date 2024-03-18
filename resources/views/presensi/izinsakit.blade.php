@@ -226,7 +226,13 @@
                                     <td>{{ $d->jabatan }}</td>
                                     <td>{{ $d->kode_dept }}</td>
                                     <td>{{ $d->kode_cabang }}</td>
-                                    <td>{{ $d->status == 'i' ? 'Izin' : 'Sakit' }}</td>
+                                    <td>
+                                        {{
+                                            $d->status == 'i' ? 'Izin' :
+                                            ($d->status == 's' ? 'Sakit' :
+                                            ($d->status == 'c' ? 'Cuti' : 'status tidak diketahui'))
+                                        }}
+                                    </td>
                                     <td>
                                         @if (!empty($d->doc_sid))
                                             @php

@@ -98,9 +98,9 @@
                     <span id="title">
                         REKAP PRESENSI KARYAWAN<br>
                         PERIODE {{ strtoupper($namabulan[$bulan]) }} {{ $tahun }}<br>
-                        PT. ADAM ADIFA<br>
+                        KLINIK UTAMA HANENDA<br>
                     </span>
-                    <span><i>Jln. H. Dahlan No. 75, Kecamatan Sindangrasa, Kabupaten Ciamis</i></span>
+                    <span><i>Jl. Raya Tengah R9-54 Gedong Pasar Rebo Jakarta Timur</i></span>
                 </td>
             </tr>
         </table>
@@ -219,11 +219,11 @@
             </tr>
             <tr>
                 <td style="text-align: center; vertical-align:bottom" height="100px">
-                    <u>Qiana Aqila</u><br>
+                    <u>Maya Maulina</u><br>
                     <i><b>HRD Manager</b></i>
                 </td>
                 <td style="text-align: center; vertical-align:bottom">
-                    <u>Daffa</u><br>
+                    <u>dr. Fenny Lovitha Dewi, Sp.KFR</u><br>
                     <i><b>Direktur</b></i>
                 </td>
             </tr>

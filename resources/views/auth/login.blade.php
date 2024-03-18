@@ -29,12 +29,12 @@
     <!-- App Capsule -->
     <div id="appCapsule" class="pt-0">
 
-        <div class="login-form mt-1">
+        <div class="login-form mt-5">
             <div class="section">
-                <img src="{{ asset('assets/img/login/login.webp') }}" alt="image" class="form-image">
+                <img src="{{ asset('assets/img/login/loginhanenda.webp') }}" alt="image" class="form-image">
             </div>
-            <div class="section mt-1">
-                <h1>E-Presensi </h1>
+            <div class="section mt-5">
+                <h1>E-Presensi</h1>
                 <h4>Silahkan Login</h4>
             </div>
             <div class="section mt-1 mb-5">

@@ -190,33 +190,17 @@
             @endforeach
         </table>
 
-        <table width="100%" style="margin-top:100px">
+            <table width="100%" style="margin-top:100px">
             <tr>
-                <td colspan="2" style="text-align: right">Tasikmalaya, {{ date('d-m-Y') }}</td>
+                <td colspan="2" style="text-align: right">Jakarta Timur, {{ date('d-m-Y') }}</td>
             </tr>
             <tr>
                 <td style="text-align: center; vertical-align:bottom" height="100px">
-                    <u>Qiana Aqila</u><br>
+                    <u>Maya Maulina</u><br>
                     <i><b>HRD Manager</b></i>
                 </td>
                 <td style="text-align: center; vertical-align:bottom">
-                    <u>Daffa</u><br>
-                    <i><b>Direktur</b></i>
-                </td>
-            </tr>
-        </table>
-
-        <table width="100%" style="margin-top:100px">
-            <tr>
-                <td colspan="2" style="text-align: right">Tasikmalaya, {{ date('d-m-Y') }}</td>
-            </tr>
-            <tr>
-                <td style="text-align: center; vertical-align:bottom" height="100px">
-                    <u>Qiana Aqila</u><br>
-                    <i><b>HRD Manager</b></i>
-                </td>
-                <td style="text-align: center; vertical-align:bottom">
-                    <u>Daffa</u><br>
+                    <u>dr. Fenny Lovitha Dewi, Sp.KFR</u><br>
                     <i><b>Direktur</b></i>
                 </td>
             </tr>
