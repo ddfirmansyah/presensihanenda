@@ -90,9 +90,9 @@
                     <span id="title">
                         LAPORAN PRESENSI KARYAWAN<br>
                         PERIODE {{ strtoupper($namabulan[$bulan]) }} {{ $tahun }}<br>
-                        PT. ADAM ADIFA<br>
+                        KLINIK UTAMA HANENDA<br>
                     </span>
-                    <span><i>Jln. H. Dahlan No. 75, Kecamatan Sindangrasa, Kabupaten Ciamis</i></span>
+                    <span><i>Jl. Raya Tengah R9-54 Gedong Pasar Rebo Jakarta Timur</i></span>
                 </td>
             </tr>
         </table>

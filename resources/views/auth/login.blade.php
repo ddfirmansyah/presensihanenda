@@ -34,7 +34,7 @@
                 <img src="{{ asset('assets/img/login/loginhanenda.webp') }}" alt="image" class="form-image">
             </div>
             <div class="section mt-5">
-                <h1>E-Presensi</h1>
+                <h1 style="background-color:rgb(226, 133, 116);">E-Presensi</h1>
                 <h4>Silahkan Login</h4>
             </div>
             <div class="section mt-1 mb-5">

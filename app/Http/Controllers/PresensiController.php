@@ -172,7 +172,7 @@ class PresensiController extends Controller
             $jamkerja = DB::table('konfigurasi_jamkerja_by_date')
                 ->join('jam_kerja', 'konfigurasi_jamkerja_by_date.kode_jam_kerja', '=', 'jam_kerja.kode_jam_kerja')
                 ->where('nik', $nik)
-                ->where('tanggal', $hariini)
+                ->where('tanggal', $tgl_presensi)
                 ->first();
 
             //Jika Tidak Memiliki Jam Kerja By Date
@@ -255,7 +255,7 @@ class PresensiController extends Controller
                         $response = curl_exec($curl);
 
                         curl_close($curl);
-                        echo $response;
+                        //echo $response;
                     } else {
                         echo "error|Maaf Gagal absen, Hubungi Tim It|out";
                     }
@@ -296,7 +296,7 @@ class PresensiController extends Controller
                         $response = curl_exec($curl);
 
                         curl_close($curl);
-                        echo $response;
+                        //echo $response;
                         Storage::put($file, $image_base64);
                     } else {
                         echo "error|Maaf Gagal absen, Hubungi Tim It|in";
